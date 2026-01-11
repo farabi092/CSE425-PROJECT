@@ -1,0 +1,82 @@
+Project Instructions: Unsupervised Learning Project: VAE for Hybrid Language Music Clustering
+Project Overview
+
+This project explores the use of Variational Autoencoders (VAE), including Conditional VAE (CVAE) and Beta-VAE, for clustering hybrid language music tracks using multi-modal features. The goal is to improve clustering results using features such as MFCC (audio), TF-IDF (lyrics), and genre metadata. The project is organized into three tasks, progressing in complexity and model sophistication.
+
+Project Tasks
+
+Easy Task: This task focuses on implementing a basic VAE for audio feature extraction (MFCC) and clustering the latent representations using K-Means. The model is trained and evaluated using clustering metrics like Silhouette Score and Calinski-Harabasz Index.
+
+Medium Task: The architecture is extended by adding convolutional layers to better capture the spectral patterns of the audio. TF-IDF features from the lyrics and genre information are also added as inputs. K-Means, Agglomerative Clustering, and DBSCAN are applied to the multimodal latent features for clustering.
+
+Hard Task: This task introduces a Conditional VAE (CVAE), conditioned on the genre of the music. The results are compared to baseline methods like PCA + K-Means, Autoencoder + K-Means, and MFCC + K-Means. Multiple clustering methods and evaluation metrics are used to analyze the performance of the CVAE model.
+
+Dataset
+
+The dataset used for the project consists of English and Bangla hybrid language music tracks. The data includes:
+
+Audio Features: MFCC features extracted from the audio tracks.
+
+Lyrics Features: TF-IDF vectors extracted from the lyrics of the songs.
+
+Genre Information: Categorical genre data for each track, which is used as additional input for the CVAE model.
+
+Project Directory Structure
+
+src: Contains the code for the Easy, Medium, and Hard tasks. Each task progressively builds on the previous one, enhancing the VAE model to incorporate additional features and more complex architectures.
+
+results: Includes all visualizations (e.g., t-SNE, UMAP plots) and clustering metrics. The results show how the VAE-based models perform compared to baseline methods.
+
+dataset: Contains the hybrid language music dataset used for training the models. The data is preprocessed to extract MFCC features, TF-IDF features, and genre labels.
+
+Project Workflow
+
+Load the Dataset: Start by loading the audio, lyrics, and genre data from the dataset folder.
+
+Preprocess the Data: Extract MFCC features from the audio using librosa, convert lyrics to TF-IDF using TfidfVectorizer, and one-hot encode genre.
+
+Model Training:
+
+Easy Task: Train a simple VAE on the MFCC features and perform K-Means clustering on the latent space.
+
+Medium Task: Extend the VAE architecture with convolutional layers, and incorporate lyrics and genre as inputs. Apply K-Means, Agglomerative Clustering, and DBSCAN.
+
+Hard Task: Implement a Conditional VAE (CVAE) conditioned on genre and compare with baseline methods.
+
+Evaluate Results: Use clustering metrics like Silhouette Score, Calinski-Harabasz Index, Davies-Bouldin Index, and Adjusted Rand Index (ARI) to evaluate the model’s performance.
+
+Visualize Results: Use t-SNE or UMAP to visualize the clustering results in 2D and assess the quality of the learned latent space.
+
+Clustering Evaluation Metrics
+
+Silhouette Score: Measures how similar an object is to its own cluster compared to other clusters.
+
+Calinski-Harabasz Index: Measures the ratio of the sum of between-cluster dispersion to within-cluster dispersion.
+
+Davies-Bouldin Index: Measures the average similarity between each cluster and its most similar neighbor.
+
+Adjusted Rand Index (ARI): Measures the similarity between two data clusterings, adjusted for chance.
+
+Cluster Purity: Measures the dominance of the most frequent class within a cluster.
+
+Results
+
+Results are presented in the results folder, which includes:
+
+Cluster visualizations using t-SNE or UMAP to show how well the clusters are formed.
+
+Clustering metrics: Silhouette Scores, ARI, and Cluster Purity for each task and baseline comparison.
+
+Running the Code
+
+To run the project:
+
+Upload the Dataset: Ensure the dataset is placed correctly in the dataset folder.
+
+Run Easy Task Code: Run the code for the Easy Task in the src folder. This will train a basic VAE and perform clustering using K-Means.
+
+Run Medium Task Code: Run the Medium Task code to implement the multimodal VAE and clustering.
+
+Run Hard Task Code: Finally, execute the Hard Task code for the Conditional VAE and comparison with baseline methods.
+
+Check Results: Check the results folder for visualizations and metrics.
