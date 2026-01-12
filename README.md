@@ -1,6 +1,6 @@
 CSE425 Neural Network Project
 
-***Unsupervised Learning Project: VAE for Hybrid Language Music Clustering**
+***Unsupervised Learning Project: VAE for Hybrid Language Music Clustering***
 
 This repository contains the implementation of the CSE425 course project
 on music data analysis using neural networks and clustering techniques.
@@ -32,3 +32,4 @@ Hard Task
 1. Open any `.ipynb` file from the `SRC/` folder in Google Colab.
 2. Upload the dataset when prompted.
 3. Run all cells sequentially.
+4. Check the preview for already run codes. 
