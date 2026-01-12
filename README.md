@@ -1,9 +1,9 @@
 CSE425 Neural Network Project
-Unsupervised Learning Project: VAE for Hybrid Language Music Clustering
+
+***Unsupervised Learning Project: VAE for Hybrid Language Music Clustering**
 
 This repository contains the implementation of the CSE425 course project
 on music data analysis using neural networks and clustering techniques.
-
 ## Tasks Implemented
 
 Easy Task
